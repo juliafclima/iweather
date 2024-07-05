@@ -5,8 +5,8 @@ import {
   View,
 } from "react-native";
 
-import { styles } from "./styles";
 import { theme } from "@styles/theme";
+import { styles } from "./styles";
 
 type Props = TextInputProps & {
   isLoading?: boolean;
@@ -21,7 +21,12 @@ export function Input({ isLoading = false, ...rest }: Props) {
         {...rest}
       />
 
-      {isLoading && <ActivityIndicator color={theme.colors.blue_light} />}
+      {isLoading && (
+        <ActivityIndicator
+          testID="activity-indicator"
+          color={theme.colors.blue_light}
+        />
+      )}
     </View>
   );
 }
