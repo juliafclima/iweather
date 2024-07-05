@@ -1,10 +1,10 @@
-import { AppRoutes } from "./app.routes";
-import { Dashboard } from "@screens/Dashboard";
-import { NavigationContainer } from "@react-navigation/native";
-import { View } from "react-native";
-import { theme } from "@styles/theme";
 import { useCity } from "@hooks/useCity";
+import { NavigationContainer } from "@react-navigation/native";
+import { Dashboard } from "@screens/Dashboard";
+import { theme } from "@styles/theme";
+import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { AppRoutes } from "./app.routes";
 
 export function Routes() {
   const { city } = useCity();

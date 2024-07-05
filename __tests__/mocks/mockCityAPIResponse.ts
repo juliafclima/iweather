@@ -10,4 +10,4 @@ export const mockCityAPIResponse: CityAPIResponse = {
     lat: 123,
     lon: 456,
   },
-};
+}; 
