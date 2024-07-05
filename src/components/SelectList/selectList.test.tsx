@@ -6,12 +6,24 @@ describe("Component: SelectList", () => {
   it("should be return city details selected | deve ser retornado os detalhes da cidade selecionados", async () => {
     const data = [
       { id: "1", name: "Campinas", latitude: 123, longitude: 456 },
-      { id: "2", name: "Campo grande", latitude: 123, longitude: 456 },
+      { id: "2", name: "Campo grande", latitude: 789, longitude: 487 },
     ];
 
-    render(<SelectList data={data} onChange={() => {}} onPress={() => {}} />);
+    const onPress = jest.fn();
+
+    render(<SelectList data={data} onChange={() => {}} onPress={onPress} />);
 
     const selectedCity = screen.getByText(/campo/i);
-        fireEvent.press(selectedCity);
+    fireEvent.press(selectedCity);
+
+    expect(onPress).toBeCalledWith(data[1]);
+  });
+
+  it("not should be show options when data props is empty | não deve haver opções de exibição quando os adereços de dados estão vazios", () => {
+    render(<SelectList data={[]} onChange={() => {}} onPress={() => {}} />);
+
+    const options = screen.getByTestId("options");
+
+    expect(options.children).toHaveLength(0);
   });
 });
