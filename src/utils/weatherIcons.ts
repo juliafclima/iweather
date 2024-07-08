@@ -22,6 +22,7 @@ export const weatherIcons = {
     icon_day: iconCloudyDay,
     icon_night: iconCloudyNight,
   },
+  
   Rain: {
     name: "Chuva",
     bg_day: bgRainDay,
@@ -29,6 +30,7 @@ export const weatherIcons = {
     icon_day: iconRainDay,
     icon_night: iconRainDay,
   },
+  
   Clear: {
     name: "Limpo",
     bg_day: bgClearDay,
@@ -36,6 +38,7 @@ export const weatherIcons = {
     icon_day: iconClearDay,
     icon_night: iconClearNight,
   },
+
   Snow: {
     name: "Neve",
     bg_day: bgSnowDay,
