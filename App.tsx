@@ -12,6 +12,7 @@ import { Loading } from "./src/components/Loading";
 import { Routes } from "./src/routes";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "react-native";
+import { useEffect } from "react";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
